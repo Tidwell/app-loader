@@ -37,7 +37,7 @@ function log() {
  */
 
 function bindLogging(app) {
-	if (app.config.eventEmitter && app.config.eventEmitter.log) {
+	if (app.config && app.config.eventEmitter && app.config.eventEmitter.log) {
 		app.eventEmitter.onAny(log);
 	}
 }

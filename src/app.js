@@ -54,7 +54,9 @@ App.prototype.init = function() {
 		app.eventEmitter.emit('app.ready', app);
 	});
 
-	app.findModules(app.config.glob);
+	if (app.config && app.config.glob) {
+		app.findModules(app.config.glob);
+	}
 };
 
 /**
